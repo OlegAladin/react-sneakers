@@ -1,0 +1,112 @@
+.main {
+    max-width: 1080px;
+    min-height: calc(100vh - 100px);
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+
+    .catalog {
+        padding: 0 60px 45px;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .search {
+                width: 250px;
+                height: 45px;
+                padding-left: 46px;
+                border: 1px solid #F3F3F3;
+                border-radius: 10px;
+                background-image: url('./../../images/search.svg');
+                background-repeat: no-repeat;
+                background-position: 18px 14px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+
+                &::placeholder {
+                    color: #C4C4C4;
+                }
+            }
+        }
+
+        .catalogBlock {
+            display: grid;
+            grid-template-columns: repeat(4, 210px);
+            gap: 40px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1120px) {
+    .main {
+        min-height: calc(100vh - 40px);
+
+        .catalog {
+            .catalogBlock {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 869px) {
+    .main {
+        .catalog {
+            .catalogBlock {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 712px) {
+    .main {
+        .catalog {
+            .header {
+                flex-direction: column;
+
+                h1 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 619px) {
+    .main {
+        .catalog {
+            .catalogBlock {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    .main {
+        .catalog {
+            padding: 0 20px 25px;
+
+            .header {
+                flex-direction: column;
+
+                .search {
+                    width: 200px;
+                    height: 30px;
+                    background-position: 12px 6px;
+                }
+            }
+        }
+    }
+}

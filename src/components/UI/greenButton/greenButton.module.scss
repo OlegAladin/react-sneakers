@@ -1,0 +1,16 @@
+.greenButton {
+    border-radius: 18px;
+    background-color: #9DD458;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: #78c01f;
+        transition: 0.5s;
+    }
+}
